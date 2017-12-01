@@ -1,0 +1,23 @@
+spring:
+  datasource:
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+      username: admin
+      password: admin
+  thymeleaf:
+    encoding: UTF-8
+    mode: HTML5
+    prefix: classpath:/page/
+    suffix: .html
+    check-template: true
+    cache: false
+
+mybatis:
+  mapper-locations: classpath*:sqlmapper/*Mapper.xml
+  type-aliases-package: com.*.pojo
+
+server: 
+  port: 8059
+  context-path: /com
+  
+
